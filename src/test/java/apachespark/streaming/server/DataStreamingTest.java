@@ -11,6 +11,7 @@ public class DataStreamingTest {
 
 	@Before
 	public void setUp() throws Exception {
+		//Start streaming server in endless while loop
 		StreamingServer.main(null);
 		System.out.println("Server sending Data on localhost:9999");
 		
@@ -18,6 +19,7 @@ public class DataStreamingTest {
 
 	@Test
 	public void test() {
+		//Start listening to server data over localhost:9999
 		SimpleStreamingApp.main(null);
 	}
 
